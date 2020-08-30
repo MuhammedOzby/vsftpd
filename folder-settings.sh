@@ -8,7 +8,7 @@ sudo cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.orig
 #Copy created file
 sudo cp ./vsftpd.conf /etc/vsftpd/vsftpd.conf
 #User add chroot
-echo $username | sudo tee -a /etc/vsftpd/user_list
+echo $username | sudo tee -a /etc/vsftpd/chroot_list
 
 #folder permissions
 sudo mkdir -p /home/$username/ftp/upload
